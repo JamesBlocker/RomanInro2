@@ -15,7 +15,17 @@ var romanize = function(input) {
       total -= 500;
       outputArray.push("D");
       alert(total);
+    } else if (total >= 400 && total < 500) {
+      total -= 400;
+      outputArray.push("CD");
+      alert(total);
+    } else if (total >= 100) {
+      total -= 100;
+      outputArray.push("C");
+      alert(total);
     }
+
+
   }
   var joinedArray = outputArray.join('');
   alert(total);
