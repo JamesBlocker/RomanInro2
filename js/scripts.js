@@ -23,8 +23,18 @@ var romanize = function(input) {
       total -= 100;
       outputArray.push("C");
       alert(total);
+    } else if (total >= 90 && total < 100) {
+      total -= 90;
+      outputArray.push("XC");
+      alert(total);
+    } else if (total >= 50) {
+      total -= 50;
+      outputArray.push("L");
+    } else if (total >= 40 && total < 50) {
+      total -= 40;
+      outputArray.push("XL");
+      alert(total);
     }
-
 
   }
   var joinedArray = outputArray.join('');
