@@ -1,18 +1,25 @@
 var romanize = function(input) {
   var total = parseInt(input);
-  var outputString = [];
+  var outputArray = [];
   alert(total);
-  if (total >= 1000) {
-    total -= 1000;
-    outputString.push("M");
-    outputString.join("");
-  }else if (total >= 900 && total < 1000) {
-    total -= 900;
-    outputString.push("CM");
-    outputString.join("");
+  while (total > 0) {
+    if (total >= 1000 && total <= 3999) {
+      total -= 1000;
+      outputArray.push("M");
+      alert(total);
+    } else if (total >= 900 && total < 1000) {
+      total -= 900;
+      outputArray.push("CM");
+      alert(total);
+    } else if (total >= 500) {
+      total -= 500;
+      outputArray.push("D");
+      alert(total);
+    }
   }
+  var joinedArray = outputArray.join('');
   alert(total);
-  return outputString;
+  return joinedArray;
 };
 
 
