@@ -2,8 +2,11 @@ var romanize = function(input) {
   var total = parseInt(input);
   var outputArray = [];
   alert(total);
-  while (total > 0) {
-    if (total >= 1000 && total <= 3999) {
+  if (total > 3999) {
+    alert("Please a positive integer less than 4000, ain't nobody got time for that!");
+  }
+  while (total > 0 && total < 4000) {
+    if (total >= 1000) {
       total -= 1000;
       outputArray.push("M");
       alert(total);
@@ -34,6 +37,28 @@ var romanize = function(input) {
       total -= 40;
       outputArray.push("XL");
       alert(total);
+    } else if (total >= 10) {
+      total -= 10;
+      outputArray.push("X");
+      alert(total);
+    } else if (total >= 9 && total < 10) {
+      total -= 9;
+      outputArray.push("IX");
+      alert(total);
+    } else if (total >= 5) {
+      total -= 5;
+      outputArray.push("V");
+      alert(total);
+    } else if (total >= 4 && total < 5) {
+      total -= 4;
+      outputArray.push("IV");
+      alert(total);
+    } else if (total >= 1) {
+      total -= 1;
+      outputArray.push("I");
+      alert(total);
+    } else {
+      alert("Please a positive integer less than 4000, ain't nobody got time for that!");
     }
 
   }
